@@ -1,4 +1,4 @@
-Introduction: This repository aims to explore the customer shopping insights
+Introduction: This project aims to explore the customer shopping insights
 
 Data set source: https://www.kaggle.com/datasets/sahilprajapati143/retail-analysis-large-dataset/data
 
