@@ -1,0 +1,18 @@
+- Executives may feel confident when they see clear trends and ROI.\
+  + Why: Strategic decision-making, revenue forecasting, market expansion.\
+  + Content: High-level KPIs, revenue trends, customer growth, segment performance.\
+- Marketing teams want to understand customer behavior and sentiment (via feedback and ratings).\
+  + Why: Targeted campaigns, customer profiling, brand performance.\
+  + Content: Customer demographics, product preferences, feedback analysis.\
+- Sales teams are interested in performance metrics and customer segmentation.\
+  + Why: Sales performance tracking, upselling opportunities.\
+  + Content: Purchase patterns, top-selling products, customer lifetime value.\
+- Customer service wants to improve satisfaction and reduce complaints.\
+  + Why: Improve satisfaction, reduce churn.\
+  + Content: Feedback trends, ratings, order status issues.\
+- Product managers care about product popularity and brand performance.\
+  + Why: Understand product demand and customer preferences.\
+  + Content: Product category performance, brand ratings, feedback.\
+- Operations & Logistics teams: delays or poor shipping feedback\
+  + Why: Optimize shipping and inventory.\
+  + Content: Shipping methods, order status, geographic distribution.\

@@ -1,0 +1,52 @@
+Executive Summary
+  + Purpose: Provide a high-level overview of key insights and strategic recommendations.
+  + Contents:
+    Total revenue and growth trends:
+      Chart type: Line chart
+      Attributes: Date, Average retail/month
+      What to focus on:
+        Visual impact: Quick view of revenue health across the year
+        Growth direction: Is the trend line pointing up or down?
+        Volatility: Are there significant spikes or drops?
+        Key metrics to display:
+          Total Revenue (12-month sum)
+          Average Monthly Revenue
+          Growth Rate (Feb 2024 vs Mar 2023, or latest 3 months vs first 3 months)
+    Customer acquisition and retention metrics: 
+      Chart type:
+        Customer Segmentation Donut Chart
+          Inner ring: New vs Returning customers (count and %)
+          Visual split showing customer compositionKPI CardsTotal CustomersNew Customers (count + %)
+          Returning Customers (count + %)
+          Retention Rate
+      Attributes: Customer_ID (unique count), Date (to identify first transaction), Transaction_ID (count per customer)
+      Calculated metrics
+        New Customers: Customers with only 1 transaction OR first transaction in the period
+        Returning Customers: Customers with 2+ transactions
+        Retention Rate: (Returning Customers / Total Customers) × 100
+      What to focus on:
+        Customer composition: What % are loyal/repeat customers?
+        Acquisition success: Are we bringing in new customers?
+        Retention health: Strong retention (>30-40%) indicates customer satisfaction
+        Balance: Healthy mix of new and returning customers
+    Top-performing product categories and brands:Top 5 Product Categories - Horizontal Bar Chart/ Top 5 Product Brands - Horizontal Bar ChartProduct_Category, Product_Brand
+Total_Amount (aggregated as SUM)
+Date (for trend sparklines)
+Transaction_ID (count for volume)What to focus on:Revenue leaders: Which categories/brands drive most revenue?Trend direction: Are top performers growing or declining?Volume vs Value: High revenue with low transactions = premium productsConcentration risk: Is revenue too dependent on few categories/brands?Key operational highlights (e.g., shipping efficiency, order fulfillment rates)Shipping Method Usage - Horizontal Stacked Bar Chart/ Order Status Summary - KPI Cards with IconsShipping_Method (count of usage)
+Order_Status (categorized into success vs problems)
+Transaction_ID (count)
+Total_Amount (for revenue by status)What to focus on:Operational efficiency: Are most orders successful?Shipping preferences: What methods do customers prefer?Problem areas: What % of orders have issues?Financial impact: Revenue at risk from problematic ordersSummary of customer satisfaction and feedbackAverage Ratings by Product Category - Horizontal Bar Chart with Stars/ Feedback Sentiment Trend - Line Chart/ Key Feedback Highlights - Text Summary BoxRatings (average per category)
+Product_Category
+Feedback (text analysis for themes)
+Date (for trend analysis)What to focus on:Overall satisfaction level: Are customers happy?Category-specific issues: Which products get best/worst ratings?Trend direction: Is satisfaction improving or declining?Actionable insights: What are customers saying?Leadership concernsTop section: Large KPI cards showing:Total RevenueTotal CustomersRevenue per CustomerAverage Order ValueTotal TransactionsAverage Transactions per CustomerComparison view: Bar chart showing revenue per customer by:Customer SegmentTop 10 StatesProduct CategoryTrend analysis: Line chart showing monthly trends of:Revenue per CustomerAverage Order ValueThese show if efficiency is improving over timeAdd calculated fields:Revenue per Customer = SUM(Total_Amount) / COUNT_DISTINCT(Customer_ID)AOV = SUM(Total_Amount) / COUNT(Transaction_ID)Purchase Frequency = COUNT(Transaction_ID) / COUNT_DISTINCT(Customer_ID)Focus: Strategic performance and growth opportunitiesKey Metrics:Revenue trends (monthly/yearly): Line chartTotal_Amount (left y axis) and Date (x axis in month or quarter)What to focus on:Seasonal patterns: Identify peak and low monthsGrowth trajectory: Is revenue increasing, stable, or declining?Year-over-year comparison: If you want to show Mar-Dec 2023 vs Jan-Feb 2024 patternsAdd a trend line to visualize overall directionConsider adding: Month-over-month growth rate as a secondary metricCustomer lifetime value (CLV): Grouped Bar chart/ Heat MapCustomer_ID (to calculate unique customers)Total_Amount (aggregated as SUM per customer)
+Customer_Segment
+State or City (for geographic segmentation)
+Age, Gender, Income (for demographic segmentation)What to focus on:High-value segments: Which customer segments generate the most lifetime value?Geographic disparities: Which locations have highest CLV customers?Demographic patterns: Age/income brackets with highest spendingDistribution: Are there many small spenders and few big spenders? (Pareto principle)Market segmentation and expansion opportunities: Stacked Bar Chart (Age Group, Gender, and Income levels)/  Bubble Chart/ Geographic Heat Map or Choropleth Map (Revenue by State/City)Demographics: Age, Gender, Income, Customer_Segment
+Product: Product_Category, Product_Brand, Product_Type
+Geographic: State, City, Country
+Revenue: Total_Amount
+Volume: Transaction_ID (count)What to focus on:Underserved segments: Demographics with low penetration but high potentialGeographic white spaces: Regions with low revenue but high population/incomeProduct-market fit: Which products resonate with which segments?Growth potential: Segments showing increasing transaction frequencyROI on marketing and operations: Chart type:Scorecard + KPI Cards + Bar ChartsRevenue per CustomerAverage Order Value (AOV)Purchase FrequencyCustomer Acquisition Efficiency (if new vs. returning customers can be identified)Grouped Bar Chart: Compare metrics across customer segments, regions, or product categoriesCustomer_ID (unique count)
+Transaction_ID (count for frequency)
+Total_Amount (for revenue calculations)
+Customer_Segment, State, Product_Category
+Date (to calculate time-based metrics)What to focus on:Revenue per Customer: Which segments/regions generate most efficient revenue?Repeat purchase rate: % of customers making multiple purchasesAverage basket size: Are customers buying more per transaction?Operational efficiency indicators:Revenue per transactionOrders per customerRevenue by shipping method (efficiency of fulfillment)Visuals:KPI dashboardsTrend chartsGeographic heatmaps of customer distribution
