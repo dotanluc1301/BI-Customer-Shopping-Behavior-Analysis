@@ -1,0 +1,92 @@
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 🌟 INVEST & GROW (Stars)                                                    │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ Products: Category A, Brand X                                               │
+│ Characteristics: High growth + High volume + High ratings (4.5+)            │
+│                                                                             │
+│ Actions:                                                                    │
+│ ✓ Increase marketing budget by XX%                                          │
+│ ✓ Ensure premium placement (online & offline)                               │
+│ ✓ Expand product line/variants                                              │
+│ ✓ Protect stock levels - avoid stockouts                                    │
+│ ✓ Leverage in cross-sell bundles                                            │
+│ ✓ Feature in all promotional campaigns                                      │
+│                                                                             │
+│ Expected Impact: +XX% revenue growth in next 6 months                       │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 💰 MAINTAIN & OPTIMIZE (Cash Cows)                                          │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ Products: Category B, Brand Z, Category E                                   │
+│ Characteristics: Stable volume + High revenue + Good ratings (4.0-4.4)      │
+│                                                                             │
+│ Actions:                                                                    │
+│ → Optimize pricing for maximum profitability                                │
+│ → Reduce marketing spend (already established)                              │
+│ → Focus on operational efficiency                                           │
+│ → Consider premium/deluxe versions                                          │
+│ → Maintain quality standards                                                │
+│ → Use as anchor products in bundles                                         │
+│                                                                             │
+│ Expected Impact: +X% profit margin through optimization                     │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ⚠️  REVITALIZE OR EXIT (Declining Products)                                 |
+├─────────────────────────────────────────────────────────────────────────────┤
+│ Products: Category C                                                        │
+│ Characteristics: Declining sales + Declining ratings (3.8 → 3.5)            │
+│                                                                             │
+│ 90-Day Action Plan:                                                         │
+│ Week 1-2: Root cause analysis                                               │
+│   • Analyze customer feedback in detail                                     │
+│   • Interview recent buyers and non-buyers                                  │
+│   • Review competitive landscape changes                                    │
+│                                                                             │
+│ Week 3-6: Test interventions                                                │
+│   • Option A: Quality improvements (if product issue)                       │
+│   • Option B: Repositioning/rebranding (if perception issue)                │
+│   • Option C: Price adjustment (if value issue)                             │
+│   • Option D: Enhanced marketing (if awareness issue)                       │
+│                                                                             │
+│ Week 7-12: Measure results                                                  │
+│   • Track sales velocity change                                             │
+│   • Monitor rating improvements                                             │
+│   • Calculate ROI of interventions                                          │
+│                                                                             │
+│ Decision Point (Day 90):                                                    │
+│   ✓ If improved: Continue support, move to Maintain category                │
+│   ✗ If no improvement: Begin exit strategy                                  │
+│                                                                             │
+│ Estimated Cost: $XX,XXX | Potential Recovery: $XXX,XXX annually             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 🔻 DISCONTINUE (Dogs)                                                       │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ Products: Category D                                                        │
+│ Characteristics: Low volume + Low ratings (3.2) + Slow velocity             │
+│                                                                             │
+│ Exit Strategy (30-60 days):                                                 │
+│ Phase 1 (Week 1-2): Clearance planning                                      │
+│   • Calculate total inventory value: $XX,XXX                                │
+│   • Set clearance pricing (50-70% off)                                      │
+│   • Plan clearance marketing campaign                                       │
+│                                                                             │
+│ Phase 2 (Week 3-6): Liquidation                                             │
+│   • Email blast to existing customers                                       │
+│   • Bundle with popular products                                            │
+│   • Final clearance sale                                                    │
+│                                                                             │
+│ Phase 3 (Week 7-8): Analysis & Documentation                                │
+│   • Document lessons learned                                                │
+│   • Analyze why product failed                                              │
+│   • Update product selection criteria                                       │
+│                                                                             │
+│ Financial Impact:                                                           │
+│   • Locked capital to free: $XX,XXX                                         │
+│   • Estimated loss: $X,XXX (clearance discount)                             │
+│   • Opportunity cost saved: $XX,XXX annually (storage, marketing)           │
+│   • Net benefit: +$XX,XXX (capital for better investments)                  │
+└─────────────────────────────────────────────────────────────────────────────┘
