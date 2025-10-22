@@ -1,0 +1,698 @@
+1. Product Category and Brand Performance
+Chart Type: Multi-Dimensional Performance Dashboard
+  1a. Performance Matrix - Bubble Chart:
+    X-axis: Sales Volume (number of transactions)
+    Y-axis: Average Order Value
+    Bubble size: Total Revenue
+    Color: Product Category/Brand
+    Quadrant analysis for strategic positioning
+  1b. Performance Trend Over Time - Multi-Line Chart:
+    Monthly revenue trends for top categories/brands
+    Shows momentum and seasonality
+  1c. Market Share Analysis - Treemap or Pie Chart:
+    Visual representation of revenue contribution by category/brand
+    Quick view of portfolio concentration
+  1d. Comprehensive Performance Table: All key metrics in one sortable table
+Attributes Needed:
+  Product_Category, Product_Brand, Product_Type
+  Total_Amount (SUM for revenue)
+  Transaction_ID (COUNT for volume)
+  Customer_ID (COUNT DISTINCT for reach)
+  Date (for trend analysis)
+  Ratings (AVG for quality metric)
+What to Focus On:
+  Portfolio health: Balance of high/low performers
+  Growth vs decline: Which products are trending up/down?
+  Revenue concentration: Over-reliance on few products = risk
+  Strategic positioning: Stars, Cash Cows, Question Marks, Dogs (BCG Matrix)
+  Cannibalization: Are some products eating into others' sales?
+Recommendations:
+  1a. Performance Matrix - BCG-Style Analysis:
+    Product Portfolio Performance Matrix
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+              High Growth / High Volume
+                        │
+        STARS          │         QUESTION MARKS
+      (Invest & Grow)   │      (Evaluate Potential)
+        ● Cat A         │         ○ Cat D
+        ● Brand X       │         ○ Brand Y
+                        │
+    ────────────────────┼────────────────────────────
+                        │
+      CASH COWS        │            DOGS
+    (Maintain & Milk)  │      (Consider Exit)
+        ● Cat B         │         ○ Cat E
+        ● Brand Z       │         ○ Brand W
+                        │
+              Low Growth / Low Volume
+
+  Bubble size = Total Revenue
+  Quadrant Definitions:
+    Stars (High Growth, High Volume): Market leaders, invest heavily
+    Cash Cows (Low Growth, High Volume): Mature products, optimize profitability
+    Question Marks (High Growth, Low Volume): Potential stars, test and invest selectively
+    Dogs (Low Growth, Low Volume): Consider discontinuation or repositioning
+  1b. Comprehensive Performance Table:
+    Product Performance Scorecard (by Category)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    Category    │ Revenue  │ % Share │ Trans │ Customers │ AOV   │ Avg Rating │ Growth │ Status      │ Action
+    ────────────┼──────────┼─────────┼───────┼───────────┼───────┼────────────┼─────────┼─────────────┼──────────
+    Category A  │ $XXX,XXX │  XX%    │ X,XXX │   X,XXX   │ $XXX  │   4.5 ★   │  +XX%   │ ⭐ Star     │ Invest
+    Category B  │ $XXX,XXX │  XX%    │ X,XXX │   X,XXX   │ $XXX  │   4.2 ★   │  +X%    │ 💰 Cash Cow │ Maintain
+    Category C  │ $XXX,XXX │  XX%    │ X,XXX │   X,XXX   │ $XXX  │   3.8 ★   │  +XX%   │ ❓ Question │ Evaluate
+    Category D  │ $XX,XXX  │  X%     │   XXX │     XXX   │ $XXX  │   3.2 ★   │  -X%    │ 🔻 Dog      │ Review
+    Category E  │ $XXX,XXX │  XX%    │ X,XXX │   X,XXX   │ $XXX  │   4.1 ★   │  +X%    │ 💰 Cash Cow │ Maintain
+    Growth = Last 6 months vs First 6 months
+
+    Same structure for Brand-level analysis:
+    Product Performance Scorecard (by Brand)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    Brand       │ Revenue  │ % Share │ Trans │ Customers │ AOV   │ Avg Rating │ Growth │ Status      │ Action
+    ────────────┼──────────┼─────────┼───────┼───────────┼───────┼────────────┼─────────┼─────────────┼──────────
+    Brand A     │ $XXX,XXX │  XX%    │ X,XXX │   X,XXX   │ $XXX  │   4.4 ★   │  +XX%   │ ⭐ Star     │ Expand
+    Brand B     │ $XXX,XXX │  XX%    │ X,XXX │   X,XXX   │ $XXX  │   4.0 ★   │  +X%    │ 💰 Cash Cow │ Maintain
+  1c. Monthly Performance Trend:
+    Category Performance Trend (12 Months)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    Revenue
+    $XXX,XXX │         ████████ Category A (Growing)
+            │      ████
+            │   ████        ▓▓▓▓▓▓▓▓ Category B (Stable)
+            │████       ▓▓▓▓
+            │        ▓▓▓▓           ░░░░ Category C (Volatile)
+            │                    ░░░
+            │                 ░░░    ░░░
+            └────────────────────────────────────────────────────────────
+            M A M J J A S O N D J F
+            2023                2024
+  1d. Market Share Visualization - Treemap:
+    Revenue Distribution by Product Category
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    ┌──────────────────────┬─────────────┬──────────────────────┐
+    │                      │             │                      │
+    │   Category A         │  Category C │   Category B         │
+    │   $XXX,XXX (35%)     │  $XX,XXX    │   $XXX,XXX (28%)     │
+    │                      │  (12%)      │                      │
+    │                      │             │                      │
+    ├──────────────────────┴─────────────┤                      │
+    │                                    │                      │
+    │   Category D                       │                      │
+    │   $XX,XXX (15%)                    │                      │
+    │                                    │                      │
+    ├────────────────────────────────────┴──────────────────────┤
+    │                                                           │
+    │   Category E - $XX,XXX (10%)                              │
+    │                                                           │
+    └───────────────────────────────────────────────────────────┘
+    Performance Insights Summary:
+    📊 Product Portfolio Health Check:
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    Portfolio Concentration:
+    - Top 3 categories represent XX% of revenue (Healthy: <60%, Risk: >75%)
+    - Top 5 brands represent XX% of revenue
+    
+    Growth Analysis:
+    - Growing categories: X out of X (+XX% avg growth)
+    - Declining categories: X out of X (-XX% avg decline)
+    - Stable categories: X out of X
+    
+    Performance vs Quality:
+    - High revenue + High rating: [List] ✓ Keep investing
+    - High revenue + Low rating: [List] ⚠️ Quality issues
+    - Low revenue + High rating: [List] 💡 Marketing opportunity
+    - Low revenue + Low rating: [List] 🔻 Consider exit
+
+2. Ratings and Feedback Trends
+Chart Type: Multi-Component Analysis Dashboard
+  2a. Ratings by Category/Brand - Bar Chart with Trend Indicators:
+  - Horizontal bars showing average ratings
+  - Color-coded by rating level (red <3.5, yellow 3.5-4.0, green >4.0)
+  - Arrow indicators showing quarterly trend
+  2b. Quarterly Rating Trend - Line Chart:
+  - Multiple lines for different categories/brands
+  - Shows rating evolution over 4 quarters
+  2c. Rating Distribution - Stacked Bar Chart:
+  - Shows distribution of 1-5 star ratings by category
+  - Identifies polarizing products (high 5-star and 1-star)
+  2d. Ratings-Sales Correlation Analysis - Scatter Plot:
+  - X-axis: Average Rating
+  - Y-axis: Total Revenue or Sales Volume
+  - Shows relationship between satisfaction and sales
+Attributes Needed:
+  - Ratings (1-5 scale)
+  - Product_Category, Product_Brand, Product_Type
+  - Date (for quarterly grouping: Q1-Q4)
+  - Total_Amount (for correlation analysis)
+  - Transaction_ID (for volume correlation)
+  - Feedback (text for sentiment analysis)
+What to Focus On:
+  Quality trends: Are ratings improving or declining?
+  Category/brand comparison: Which have highest satisfaction?
+  Problem identification: Low or declining ratings = quality issues
+  Correlation insight: Do higher ratings drive more sales?
+  Feedback themes: What are customers saying?
+Recommendations:
+  2a. Current Ratings by Category:
+    Average Customer Ratings by Product Category (Current)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    Category      │ Rating │ Visual          │  Reviews │ Q4 Trend │ Status
+    ──────────────┼────────┼─────────────────┼──────────┼──────────┼──────────────────
+    Category A    │  4.5   │ ████████░░ ★★★★★│   X,XXX   │    ↗️    │ ✓ Excellent
+    Category B    │  4.2   │ ████████░░ ★★★★☆│   X,XXX   │    →     │ ✓ Good
+    Category C    │  3.8   │ ███████░░░ ★★★★☆│   X,XXX   │    ↗️    │ ⚠️  Fair
+    Category D    │  3.2   │ ██████░░░░ ★★★☆☆│     XXX   │    ↘️    │ 🔻 Poor (Action!)
+    Category E    │  4.1   │ ████████░░ ★★★★☆│   X,XXX   │    ↗️    │ ✓ Good
+    Industry Benchmark: 4.0 ★★★★☆
+    Same structure for Brand and Product Type analysis
+  2b. Quarterly Rating Trend Analysis:
+    Rating Trends by Quarter
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    Rating
+    5.0 │
+        │                    ●━━━●━━━●━━━● Category A (Stable High)
+    4.5 │              ●━━━●
+        │        ●━━━●                ▲━━━▲━━━▲━━━▲ Category C (Improving!)
+    4.0 │  ▲━━━▲                          
+        │              ■━━━■━━━■━━━■ Category B (Stable)
+    3.5 │        ■━━━■
+        │                          ★━━━★ Category D (Declining!)
+    3.0 │                    ★━━━★
+        └────────────────────────────────────────────────────────────────
+            Q1      Q2      Q3      Q4
+          2023    2023    2023   2023-24
+    Key Insights:
+      - Category D declining from 3.8 → 3.2 (⚠️ Quality issue!)
+      - Category C improving from 3.4 → 3.8 (✓ Good progress)
+      - Category A maintaining excellence at 4.5+ (✓ Keep standard)
+  2c. Rating Distribution by Category:
+    Rating Distribution - Category A
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    5 Star │████████████████████████████████████ 45% (X,XXX reviews)
+    4 Star │████████████████████ 28% (XXX reviews)
+    3 Star │██████████ 15% (XXX reviews)
+    2 Star │████ 8% (XXX reviews)
+    1 Star │██ 4% (XXX reviews)
+    Pattern: Positive skew ✓ (Most customers satisfied)
+    Alert: 12% low ratings (1-2 stars) - Review feedback
+    For Category D (Problem Product):
+    Rating Distribution - Category D ⚠️
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    5 Star │██████████ 15% (XXX reviews)
+    4 Star │████████████ 18% (XXX reviews)
+    3 Star │████████████████ 25% (XXX reviews)
+    2 Star │████████████████████ 28% (XXX reviews) ⚠️
+    1 Star │██████████████ 14% (XXX reviews) ⚠️
+    Pattern: Bimodal/Negative ⚠️ (Inconsistent quality or expectations mismatch)
+    Alert: 42% low ratings (1-2 stars) - URGENT ACTION NEEDED
+  2d. Ratings-Sales Correlation Analysis:
+    Scatter Plot:
+      Revenue vs. Average Rating Correlation
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      Revenue
+      $XXX,XXX │                    ● Cat A (High rating, High sales)
+              │                       
+              │              ● Cat B
+              │                  ● Cat E
+              │         
+              │    ● Cat C (Improving)
+              │                            
+              │                   ○ Cat D (Low rating, Low sales)
+              └────────────────────────────────────────────────────────────
+                3.0    3.5    4.0    4.5    5.0
+                          Average Rating
+      Correlation Coefficient: +0.XX (Strong/Moderate/Weak positive correlation)
+      Insights:
+      - Strong correlation between ratings and revenue (r=0.XX)
+      - 0.5 point rating increase ≈ $XX,XXX additional revenue (estimated)
+      - Categories with 4.0+ ratings generate XX% of total revenue
+      - Low-rated products (3.0) underperform by XX% on average
+    Alternative: Correlation Table:
+      Rating Impact on Sales Performance
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      Rating Range  │ Avg Revenue │ Avg Trans │ Conversion │ Revenue/Review
+      ──────────────┼─────────────┼───────────┼─────────────┼────────────────
+      4.5 - 5.0 ★   │  $XXX,XXX   │   X,XXX   │    High     │    $XXX
+      4.0 - 4.4 ★   │  $XXX,XXX   │   X,XXX   │    Good     │    $XXX
+      3.5 - 3.9 ★   │  $XX,XXX    │     XXX   │    Medium   │    $XX
+      3.0 - 3.4 ★   │  $XX,XXX    │     XXX   │    Low      │    $XX
+      < 3.0 ★       │  $X,XXX     │      XX   │    Very Low │    $X
+      Conversion = Relative sales performance compared to average
+      Key Correlation Insights:
+        📊 Rating-Sales Relationship Analysis:
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        Findings:
+        ✓ Products with 4.0+ ratings generate XX% more revenue per transaction
+        ✓ Each 0.5 star increase correlates with +XX% sales growth
+        ⚠️ Products below 3.5 rating see XX% lower repeat purchase rate
+        ⚠️ Low ratings (1-2 stars) strongly predict sales decline in following quarter
+        Recommendations:
+        - Prioritize quality improvements for products rated below 3.5
+        - Leverage high-rated products (4.5+) in marketing campaigns
+        - Invest in fixing Category D (declining ratings = revenue risk)
+        - Test price adjustments for 3.5-4.0 rated products
+  2e. Feedback Sentiment by Category:
+  Customer Feedback Themes (Quarterly Analysis)
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Category A (4.5 ★)
+    Q1-Q2: "excellent quality", "fast shipping", "great value" (👍 Positive)
+    Q3-Q4: "love it", "highly recommend", "perfect" (👍 Positive - Consistent!)
+  Category D (3.2 ★) ⚠️
+    Q1-Q2: "okay quality", "average" (😐 Neutral)
+    Q3-Q4: "poor quality", "not as described", "disappointed" (👎 Negative - Declining!)
+  Common Complaints (Category D):
+    • Quality issues (mentioned in XX% of feedback)
+    • Product description mismatch (XX% mention)
+    • Durability concerns (XX% mention)
+  Action Items:
+    🔧 Category D: Quality control review needed
+    📝 Category D: Update product descriptions for accuracy
+    ✓ Category A: Use positive feedback in marketing materials
+
+3. Inventory Turnover (Sales Velocity Analysis)
+  Chart Type: Performance Velocity Dashboard
+    3a. Sales Velocity by Category/Brand - Horizontal Bar Chart:
+    - Bars showing transactions per month (velocity metric)
+    - Color-coded: Fast-moving (green), Medium (yellow), Slow (red)
+    3b. Sales Velocity Trend - Line Chart:
+    - Monthly velocity trends over 12 months
+    - Identifies acceleration or deceleration
+    3c. Product Movement Classification - Pie/Donut Chart:
+    - Segments: Fast-moving, Medium, Slow, Dead stock
+    3d. Days to Sell Analysis - Comparative Table:
+    - Average days between purchases for each category/brand
+    Attributes Needed:
+    - Transaction_ID (count per time period)
+    - Product_Category, Product_Brand, Product_Type
+    - Date (for velocity calculations)
+    - Total_Amount (for revenue context)
+  Calculated Metrics (Proxy for Turnover):
+    Sales Velocity: Transactions per month (higher = faster moving)
+    Average Days Between Sales: Total days / Number of transactions
+    Sales Frequency Score: Relative ranking of movement speed
+    Revenue per Day: Daily revenue generation rate
+  What to Focus On:
+    Fast movers: Products selling frequently (stock adequacy)
+    Slow movers: Products selling infrequently (overstock risk, discontinue?)
+    Seasonal patterns: Velocity changes by season
+    Cash flow impact: Fast movers = better cash conversion
+
+  Recommendations:
+    3a. Sales Velocity Classification:
+      Product Movement Analysis (Sales Velocity)
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      Category/    │ Trans/ │ Days Between│ Velocity  │ Revenue/ │ Classification │ Stock
+      Brand        │ Month  │ Purchases   │ Score     │ Day      │                │ Priority
+      ─────────────┼────────┼─────────────┼───────────┼──────────┼────────────────┼──────────
+      Category A   │  XXX   │    0.8 days │   High    │  $X,XXX  │ 🟢 Fast-moving │ Critical
+      Brand X      │  XXX   │    1.2 days │   High    │  $X,XXX  │ 🟢 Fast-moving │ High
+      Category B   │  XXX   │    2.5 days │   Medium  │  $XXX    │ 🟡 Medium      │ Medium
+      Brand Y      │  XXX   │    3.8 days │   Medium  │  $XXX    │ 🟡 Medium      │ Medium
+      Category C   │   XX   │    7.2 days │   Low     │  $XX     │ 🔴 Slow-moving │ Low
+      Category D   │   XX   │   12.5 days │   Very Low│  $XX     │ 🔴 Dead stock  │ Clearance
+      Brand Z      │   XX   │    8.9 days │   Low     │  $XX     │ 🔴 Slow-moving │ Review
+
+      Definitions:
+      🟢 Fast-moving: <3 days between sales (Top XX% velocity)
+      🟡 Medium: 3-7 days between sales (Middle XX%)
+      🔴 Slow-moving: 7-14 days between sales (Bottom XX%)
+      ⚫ Dead stock: >14 days between sales (Discontinue candidate)
+
+    3b. Movement Classification Distribution:
+      Product Portfolio by Movement Speed
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+              Portfolio Composition
+              
+              ┌─────────────────────┐
+              │                     │
+              │   Fast-moving       │  XX% of products
+              │   (XX products)     │  Generate XX% of revenue
+              │   $XXX,XXX          │
+              │                     │
+              ├─────────────────────┤
+              │   Medium            │  XX% of products
+              │   (XX products)     │  Generate XX% of revenue
+              │   $XXX,XXX          │
+              ├─────────────────────┤
+              │   Slow-moving       │  XX% of products
+              │   (XX products)     │  Generate only X% of revenue
+              │   $XX,XXX           │
+              └─────────────────────┘
+        ⚠️ Alert: XX% of portfolio is slow/dead stock
+    3c. Sales Velocity Trend Over Time:
+      Sales Velocity Trend by Category (Transactions per Month)
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      Trans/Mo
+        XXX │  ●━━●━━●━━●━━●━━● Category A (Consistently fast)
+            │  
+            │      ▲━━▲━━▲━━▲ Category B (Stable medium)
+        XX │  ▲━▲
+            │          ■━━■━━■ Category C (Declining velocity!)
+        XX │  ■━━■━■
+            │              ★━★━★ Category D (Consistently slow)
+          X │  ★━━★━━★
+            └────────────────────────────────────────────────────────────────
+            M  A  M  J  J  A  S  O  N  D  J  F
+            2023                        2024
+      ⚠️ Category C velocity declining 40% (was medium, now slow)
+      ✓ Category A maintains high velocity consistently
+
+    3d. Revenue Efficiency Analysis:
+      Sales Velocity vs Revenue Efficiency
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      Category     │ Velocity  │ Total Revenue │ Revenue/Day │ Efficiency Score
+      ─────────────┼───────────┼───────────────┼─────────────┼─────────────────
+      Category A   │ Fast      │  $XXX,XXX     │   $X,XXX    │ ⭐⭐⭐⭐⭐ Excellent
+      Category B   │ Medium    │  $XXX,XXX     │   $XXX      │ ⭐⭐⭐⭐ Good
+      Category E   │ Medium    │  $XXX,XXX     │   $XXX      │ ⭐⭐⭐⭐ Good
+      Category C   │ Slow      │  $XX,XXX      │   $XX       │ ⭐⭐ Fair
+      Category D   │ Very Slow │  $XX,XXX      │   $X        │ ⭐ Poor
+
+      High Efficiency = Fast velocity + High revenue
+      Low Efficiency = Slow velocity + Low revenue
+
+  Actionable Insights:
+    💡 Inventory & Product Management Recommendations:
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    Fast-Moving Products (Category A, Brand X):
+      ✓ Ensure adequate stock levels - risk of stockouts
+      ✓ Consider expanding product line in these categories
+      ✓ These drive XX% of revenue with high cash conversion
+      ✓ Maintain premium shelf/website placement
+    
+    Medium-Moving Products (Category B, E):
+      → Monitor velocity trends closely
+      → Test promotional strategies to accelerate movement
+      → Stable performers - maintain current strategy
+    
+    Slow-Moving Products (Category C):
+      ⚠️ Velocity declining - investigate root cause
+      ⚠️ Consider: Price reduction, bundling with fast-movers, marketing push
+      ⚠️ Timeline: If no improvement in 2 quarters, plan exit
+    
+    Dead Stock (Category D):
+      🔻 Immediate action: Clearance sale or bundle deals
+      🔻 Discontinue ordering/restocking
+      🔻 Free up capital for fast-moving inventory
+      🔻 Estimated locked capital: $XX,XXX (opportunity cost)
+    
+    Portfolio Optimization:
+      • Current: XX% fast, XX% medium, XX% slow
+      • Target: XX% fast, XX% medium, <10% slow (industry best practice)
+      • Action: Shift mix toward fast/medium movers over next 2 quarters
+
+4. New Product Adoption Rates
+Chart Type: N/A - No New Products
+Alternative: Product Lifecycle Analysis
+Since there are no new products, we can analyze existing products' lifecycle stages and maturity:
+4a. Product Maturity Analysis - Lifecycle Stage Classification:
+
+Introduction (new to customers, growing awareness)
+Growth (rapid sales increase)
+Maturity (stable, high volume)
+Decline (decreasing sales)
+
+4b. Product Age Analysis:
+
+First transaction date per product
+Revenue trajectory from first sale to present
+Time to profitability/significance
+
+Attributes Needed:
+
+Product_Category, Product_Brand, Product_Type
+Date (MIN for first sale date, for age calculation)
+Total_Amount (SUM over time for trajectory)
+Transaction_ID (COUNT for adoption rate)
+
+What to Focus On:
+
+Lifecycle positioning: Where is each product in its lifecycle?
+Decline identification: Products losing momentum
+Evergreen products: Long-term stable performers
+Growth opportunities: Products showing acceleration
+
+Recommendations:
+4a. Product Lifecycle Stage Analysis:
+Product Lifecycle Classification
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Product      │ First Sale │ Age    │ Current    │ Lifecycle  │ Strategic
+             │ Date       │(Months)│ Performance│ Stage      │ Action
+─────────────┼────────────┼────────┼────────────┼────────────┼────────────────────
+Category A   │ Mar 2023   │  12    │ High+Rising│ 🚀 Growth  │ Invest & expand
+Brand X      │ Apr 2023   │  11    │ High+
+Category A   │ Mar 2023   │  12    │ High+Rising│ 🚀 Growth  │ Invest & expand
+Brand X      │ Apr 2023   │  11    │ High+Rising│ 🚀 Growth  │ Invest heavily
+Category B   │ Mar 2023   │  12    │ High+Stable│ 💰 Maturity│ Optimize & milk
+Brand Y      │ Jun 2023   │   9    │ Med+Rising │ 📈 Growth  │ Support growth
+Category C   │ May 2023   │  10    │ Med+Decline│ ⚠️  Decline │ Revitalize/Exit
+Brand Z      │ Mar 2023   │  12    │ High+Stable│ 💰 Maturity│ Maintain
+Category D   │ Aug 2023   │   7    │ Low+Decline│ 🔻 Decline │ Exit strategy
+Category E   │ Mar 2023   │  12    │ Med+Stable │ 💰 Maturity│ Maintain
+
+Lifecycle Stage Definitions:
+🚀 Growth: Sales increasing >15% quarter-over-quarter
+💰 Maturity: Sales stable (±15% variation)
+⚠️  Decline: Sales decreasing 15-30% quarter-over-quarter  
+🔻 Decline (Critical): Sales decreasing >30%
+
+
+4b. Revenue Trajectory by Product:
+
+12-Month Sales Trajectory Analysis
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Revenue
+$XXX,XXX │                      ●●● Category A (Accelerating)
+         │                  ●●●
+         │              ●●●
+         │          ●●●          ▓▓▓▓▓▓▓▓ Category B (Mature/Stable)
+         │      ●●●        ▓▓▓▓▓▓
+         │  ●●●      ▓▓▓▓▓▓
+         │      ▓▓▓▓               ■■■ Category C (Declining)
+         │                    ■■■■
+         │                  ■■
+         └────────────────────────────────────────────────────────────
+         M  A  M  J  J  A  S  O  N  D  J  F
+         2023                        2024
+
+Growth Phase Products: Strong upward trajectory (invest)
+Mature Phase Products: Flat trajectory (optimize)
+Decline Phase Products: Downward trajectory (action needed)
+
+
+4c. Time-to-Traction Analysis:
+
+Product Performance Acceleration Timeline
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Product      │ Months to  │ Months to │ Current   │ Acceleration
+             │ $10K Rev   │ $50K Rev  │ Monthly   │ Rating
+─────────────┼────────────┼───────────┼───────────┼──────────────────
+Category A   │     2      │     5     │  $XX,XXX  │ ⚡⚡⚡ Fast
+Brand X      │     3      │     6     │  $XX,XXX  │ ⚡⚡⚡ Fast
+Category B   │     1      │     3     │  $XX,XXX  │ ⚡⚡⚡⚡ Very Fast
+Brand Y      │     4      │     8     │  $X,XXX   │ ⚡⚡ Moderate
+Category C   │     5      │    10+    │  $X,XXX   │ ⚡ Slow
+Category D   │     6      │    N/A    │  $XXX     │ ○ Very Slow
+
+⚡⚡⚡⚡ = Reached milestones quickly (strong product-market fit)
+○ = Struggled to gain traction (weak product-market fit)
+
+
+Insights Summary:
+
+📊 Product Lifecycle Insights:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Portfolio Health:
+- Growth Stage: X products (XX% of portfolio, XX% of revenue) - Healthy!
+- Maturity Stage: X products (XX% of portfolio, XX% of revenue)
+- Decline Stage: X products (XX% of portfolio, XX% of revenue) - Action needed!
+
+Key Findings:
+✓ Category A/Brand X show strong acceleration - double down on these
+✓ Category B reached maturity quickly - proven winners, optimize pricing
+⚠️ Category C showing decline after 10 months - investigate immediately
+🔻 Category D never gained traction - discontinue to free resources
+
+Lifecycle Management Strategy:
+1. Growth Products (A, X, Y): Increase marketing budget, expand distribution
+2. Mature Products (B, Z, E): Focus on profitability, consider line extensions
+3. Declining Products (C): 90-day revival plan or exit decision
+4. Failed Products (D): Immediate discontinuation, learnings documentation
+
+Portfolio Refresh Needed:
+- X products in decline = XX% of SKUs but only X% of revenue
+- Opportunity: Replace slow movers with 2-3 new high-potential products
+- Estimated impact: +XX% revenue if successful replacements
+
+1. Product Performance Calculations:
+sql-- Portfolio Classification (BCG Matrix)
+CASE
+  WHEN (Sales_Volume >= MEDIAN_VOLUME AND Growth_Rate >= 15) THEN 'Star'
+  WHEN (Sales_Volume >= MEDIAN_VOLUME AND Growth_Rate < 15) THEN 'Cash Cow'
+  WHEN (Sales_Volume < MEDIAN_VOLUME AND Growth_Rate >= 15) THEN 'Question Mark'
+  ELSE 'Dog'
+END
+
+-- Growth Rate (H2 vs H1)
+((SUM(CASE WHEN Date >= '2023-09-01' THEN Total_Amount END) - 
+  SUM(CASE WHEN Date < '2023-09-01' THEN Total_Amount END)) /
+  SUM(CASE WHEN Date < '2023-09-01' THEN Total_Amount END))  100
+
+-- Market Share by Category
+SUM(Total_Amount) / SUM(SUM(Total_Amount)) OVER ()  100
+2. Ratings Analysis Calculations:
+sql-- Quarterly Rating
+AVG(CASE 
+  WHEN Date BETWEEN '2023-03-01' AND '2023-05-31' THEN Ratings 
+END) AS Q1_Rating
+
+-- Rating Trend Direction
+CASE
+  WHEN Q4_Rating > Q3_Rating THEN 'Improving'
+  WHEN Q4_Rating < Q3_Rating THEN 'Declining'
+  ELSE 'Stable'
+END
+
+-- Rating Category
+CASE
+  WHEN AVG(Ratings) >= 4.5 THEN 'Excellent'
+  WHEN AVG(Ratings) >= 4.0 THEN 'Good'
+  WHEN AVG(Ratings) >= 3.5 THEN 'Fair'
+  ELSE 'Poor'
+END
+
+-- Rating Distribution
+SUM(CASE WHEN Ratings = 5 THEN 1 END) / COUNT(Ratings)  100 AS Pct_5Star
+3. Sales Velocity Calculations:
+sql-- Transactions per Month
+COUNT(Transaction_ID) / 12 AS Trans_Per_Month
+
+-- Days Between Purchases
+365 / COUNT(Transaction_ID) AS Avg_Days_Between_Sales
+
+-- Velocity Classification
+CASE
+  WHEN (365 / COUNT(Transaction_ID)) < 3 THEN 'Fast-moving'
+  WHEN (365 / COUNT(Transaction_ID)) BETWEEN 3 AND 7 THEN 'Medium'
+  WHEN (365 / COUNT(Transaction_ID)) BETWEEN 7 AND 14 THEN 'Slow-moving'
+  ELSE 'Dead stock'
+END
+
+-- Revenue per Day
+SUM(Total_Amount) / 365 AS Revenue_Per_Day
+4. Lifecycle Analysis Calculations:
+sql-- Product Age in Months
+DATEDIFF(MONTH, MIN(Date), CURRENT_DATE()) AS Product_Age_Months
+
+-- Lifecycle Stage
+CASE
+  WHEN Growth_Rate > 15 THEN 'Growth'
+  WHEN Growth_Rate BETWEEN -15 AND 15 THEN 'Maturity'
+  WHEN Growth_Rate BETWEEN -30 AND -15 THEN 'Decline'
+  WHEN Growth_Rate < -30 THEN 'Critical Decline'
+END
+
+-- Time to Revenue Milestone
+DATEDIFF(DAY, 
+  MIN(Date),
+  MIN(CASE WHEN Running_Total >= 10000 THEN Date END)
+) AS Days_To_10K
+5. Correlation Analysis:
+sql-- Rating-Revenue Correlation (use CORR function if available)
+CORR(AVG(Ratings), SUM(Total_Amount)) 
+OVER (PARTITION BY Product_Category)
+
+-- Or calculate manually:
+(AVG(Ratings  Total_Amount) - AVG(Ratings)  AVG(Total_Amount)) /
+(STDDEV(Ratings)  STDDEV(Total_Amount))
+
+
+---
+
+ Critical Insights Summary for Product Management
+
+📊 PRODUCT ANALYSIS EXECUTIVE SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 TOP PRIORITIES (Next 30 Days):
+
+1. ⚡ URGENT: Category D Discontinuation
+   • Action: Initiate clearance sale immediately
+   • Impact: Free $XX,XXX locked capital
+   • Timeline: Complete in 60 days
+
+2. 🚀 GROWTH: Double Down on Category A & Brand X
+   • Action: Increase marketing budget 50%
+   • Impact: Projected +$XXX,XXX additional revenue
+   • Timeline: Implement next quarter
+
+3. ⚠️  QUALITY: Fix Category D Rating Decline (3.8 → 3.2)
+   • Action: Quality control audit + customer feedback review
+   • Impact: Prevent further revenue loss ($XX,XXX at risk)
+   • Timeline: 90-day turnaround plan
+
+4. 💰 OPTIMIZATION: Enhance Cash Cow Profitability
+   • Action: Adjust pricing on Category B (+5-10%)
+   • Impact: +$XX,XXX profit without volume loss
+   • Timeline: Test in 30 days
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📈 KEY PERFORMANCE INDICATORS:
+
+Portfolio Health Score: XX/100
+  ✓ Stars (Growth products): X products, XX% revenue
+  ✓ Cash Cows (Mature products): X products, XX% revenue
+  ⚠️ Question Marks: X products, XX% revenue
+  🔻 Dogs (Exit candidates): X products, X% revenue
+
+Quality Score: X.X/5.0 (Portfolio average)
+  • Excellent (4.5+): X products
+  • Good (4.0-4.4): X products
+  • Fair (3.5-3.9): X products
+  • Poor (<3.5): X products → Action needed
+
+Sales Velocity Health: XX% Fast-moving
+  • Target: >60% fast/medium movers
+  • Current: XX% fast, XX% medium, XX% slow
+  • Gap: Need to shift XX% from slow to medium
+
+Rating-Sales Correlation: +0.XX (Strong positive)
+  • Every 0.5 star increase = +XX% revenue
+  • Products <3.5 rating underperform by XX%
+  • Prioritize quality improvements for maximum ROI
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 STRATEGIC RECOMMENDATIONS:
+
+Short-term (0-3 months):
+□ Discontinue Category D (free capital)
+□ Launch turnaround plan for Category C
+□ Increase investment in Stars (A, X)
+□ Optimize pricing on Cash Cows (B, Z, E)
+□ Address quality issues in low-rated products
+
+Mid-term (3-6 months):
+□ Introduce 2-3 new products to replace Dogs
+□ Expand successful product lines (A, X variants)
+□ Test bundling strategies (fast + slow movers)
+□ Implement automated quality monitoring
+□ Develop customer feedback loop
+
+Long-term (6-12 months):
+□ Achieve 70/20/10 portfolio mix (Growth/Mature/Decline)
+□ Maintain portfolio average rating >4.0
+□ Increase fast-mover percentage to 65%+
+□ Build predictive models for product success
+□ Establish product lifecycle management process
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Expected Financial Impact (12 months):
++ $XXX,XXX from Stars growth investment
++ $XX,XXX from Cash Cow optimization
++ $XX,XXX from freed capital redeployment
+- $X,XXX from Dog liquidation costs
++ $XX,XXX from Category C revival (if successful)
+────────────────────────────────────────
+= $XXX,XXX NET POSITIVE IMPACT

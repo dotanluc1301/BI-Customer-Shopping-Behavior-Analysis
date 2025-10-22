@@ -1,0 +1,142 @@
+##### Table of Content #####
+1. Revenue Trends (Monthly/Yearly)
+2. Customer Lifetime Value (CLV)
+  Create multiple views:
+    CLV by Customer_Segment
+    CLV by State/Region (top 10)
+    CLV by Age Group and Gender
+    CLV by Income Bracket
+3. Market Segmentation and Expansion Opportunities
+  Create a 2x2 matrix view:
+    Quadrant 1: High Revenue + High Growth (Invest & Expand)
+    Quadrant 2: High Revenue + Low Growth (Maintain)
+    Quadrant 3: Low Revenue + High Growth (Nurture)
+    Quadrant 4: Low Revenue + Low Growth (Evaluate)
+  Segment analysis table showing:
+    Revenue contribution %
+    Customer count
+    Average order value
+    Purchase frequency
+    Growth rate (if comparing periods)
+4. ROI on Marketing and Operations (Efficiency Metrics)
+  Top section: Large KPI cards showing:
+  Comparison view: Bar chart showing revenue per customer by:
+  Trend analysis: Line chart showing monthly trends of:
+#####################################################################################################
+1. Revenue Trends (Monthly/Yearly)
+  Chart Type: Combo Chart (Line + Bar)
+    Primary axis (Bars): Monthly revenue
+    Secondary axis (Line): Cumulative yearly revenue or growth rate %
+  Attributes Needed:
+    Date (formatted to Month-Year)
+    Total_Amount (aggregated as SUM)
+  What to Focus On:
+    Seasonal patterns: Identify peak and low months
+    Growth trajectory: Is revenue increasing, stable, or declining?
+    Year-over-year comparison: If you want to show Mar-Dec 2023 vs Jan-Feb 2024 patterns
+    Add a trend line to visualize overall direction
+  Consider adding: Month-over-month growth rate as a secondary metric
+  Recommendations:
+    Use color coding: Green for months exceeding average, red for below average
+    Add data labels for the top 3 and bottom 3 months
+    Include a reference line for monthly average revenue
+
+2. Customer Lifetime Value (CLV)
+  Chart Type: Grouped Bar Chart or Heat Map
+    Option A - Grouped Bar Chart: Compare average CLV across different segments side-by-side
+    Option B - Heat Map: Show CLV intensity across multiple dimensions simultaneously
+  Attributes Needed:
+    Customer_ID (to calculate unique customers)
+    Total_Amount (aggregated as SUM per customer)
+    Customer_Segment
+    State or City (for geographic segmentation)
+    Age, Gender, Income (for demographic segmentation)
+  What to Focus On:
+    High-value segments: Which customer segments generate the most lifetime value?
+    Geographic disparities: Which locations have highest CLV customers?
+    Demographic patterns: Age/income brackets with highest spending
+    Distribution: Are there many small spenders and few big spenders? (Pareto principle)
+  Recommendations:
+    Create multiple views:
+      CLV by Customer_Segment
+      CLV by State/Region (top 10)
+      CLV by Age Group and Gender
+      CLV by Income Bracket
+    Add a count of customers in each segment to show volume vs. value trade-offs
+  Consider a scatter plot: Number of customers (x-axis) vs. Average CLV (y-axis), sized by total revenue contribution
+
+3. Market Segmentation and Expansion Opportunities
+  Chart Type: Combination of Multiple Charts
+    3a. Demographic Segmentation - Stacked Bar Chart: Revenue contribution by Age Group, Gender, and Income levels
+    3b. Product Performance Matrix - Bubble Chart
+      X-axis: Number of transactions per product category
+      Y-axis: Average transaction value
+        Bubble size: Total revenue
+        Color: Product_Category
+    3c. Geographic Heat Map or Choropleth Map: Revenue by State/City with color intensity
+  Attributes Needed:
+    Demographics: Age, Gender, Income, Customer_Segment
+    Product: Product_Category, Product_Brand, Product_Type
+    Geographic: State, City, Country
+    Revenue: Total_Amount
+    Volume: Transaction_ID (count)
+  What to Focus On:
+    Underserved segments: Demographics with low penetration but high potential
+    Geographic white spaces: Regions with low revenue but high population/income
+    Product-market fit: Which products resonate with which segments?
+    Growth potential: Segments showing increasing transaction frequency
+  Recommendations:
+    Create a 2x2 matrix view:
+      Quadrant 1: High Revenue + High Growth (Invest & Expand)
+      Quadrant 2: High Revenue + Low Growth (Maintain)
+      Quadrant 3: Low Revenue + High Growth (Nurture)
+      Quadrant 4: Low Revenue + Low Growth (Evaluate)
+    Segment analysis table showing:
+      Revenue contribution %
+      Customer count
+      Average order value
+      Purchase frequency
+      Growth rate (if comparing periods)
+
+4. ROI on Marketing and Operations (Efficiency Metrics)
+  Chart Type: Scorecard + KPI Cards + Bar Charts
+    4a. Key Efficiency Metrics (Scorecard/KPI Cards):
+      Revenue per Customer
+      Average Order Value (AOV)
+      Purchase Frequency
+      Customer Acquisition Efficiency (if new vs. returning customers can be identified)
+    4b. Efficiency Comparison Chart - Grouped Bar Chart: Compare metrics across customer segments, regions, or product categories
+  Attributes Needed:
+    Customer_ID (unique count)
+    Transaction_ID (count for frequency)
+    Total_Amount (for revenue calculations)
+    Customer_Segment, State, Product_Category
+    Date (to calculate time-based metrics)
+  What to Focus On:
+    Revenue per Customer: Which segments/regions generate most efficient revenue?
+    Repeat purchase rate: % of customers making multiple purchases
+    Average basket size: Are customers buying more per transaction?
+    Operational efficiency indicators:
+      Revenue per transaction
+      Orders per customer
+      Revenue by shipping method (efficiency of fulfillment)
+  Recommendations:
+    Top section: Large KPI cards showing:
+      Total Revenue
+      Total Customers
+      Revenue per Customer
+      Average Order Value
+      Total Transactions
+      Average Transactions per Customer
+    Comparison view: Bar chart showing revenue per customer by:
+      Customer Segment
+      Top 10 States
+      Product Category
+    Trend analysis: Line chart showing monthly trends of:
+      Revenue per Customer
+      Average Order Value
+      These show if efficiency is improving over time
+  Add calculated fields:
+    Revenue per Customer = SUM(Total_Amount) / COUNT_DISTINCT(Customer_ID)
+    AOV = SUM(Total_Amount) / COUNT(Transaction_ID)
+    Purchase Frequency = COUNT(Transaction_ID) / COUNT_DISTINCT(Customer_ID)

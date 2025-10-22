@@ -1,0 +1,230 @@
+##### Table of Content #####
+1. Total Revenue and Growth Trends
+  Total Revenue (12-month sum)
+  Average Monthly Revenue
+  Growth Rate (Feb 2024 vs Mar 2023, or latest 3 months vs first 3 months)
+2. Customer Acquisition and Retention Metrics
+3. Top-Performing Product Categories and Brands
+  Top 5 Product Categories by Revenue
+4. Key Operational Highlights
+5. Summary of Customer Satisfaction and Feedback
+  Ratings by Category
+  Sentiment Trend Over Time
+  Feedback Highlights Box
+#####################################################################################################
+1. Total Revenue and Growth Trends
+  Chart Type: Area Chart with Trend Line
+    Smooth area chart showing revenue flow across all 12 months
+    Add a linear or polynomial trend line to show overall trajectory
+  Attributes Needed:
+    Date (formatted to Month-Year: Mar 2023 - Feb 2024)
+    Total_Amount (aggregated as SUM per month)
+  What to Focus On:
+    Visual impact: Quick view of revenue health across the year
+    Growth direction: Is the trend line pointing up or down?
+    Volatility: Are there significant spikes or drops?
+  Key metrics to display:
+    Total Revenue (12-month sum)
+    Average Monthly Revenue
+    Growth Rate (Feb 2024 vs Mar 2023, or latest 3 months vs first 3 months)
+  Recommendations:
+    Use a gradient color fill (light to dark) to add visual appeal
+    Add annotations for the highest and lowest revenue months
+    Include a summary box showing:
+      Total Revenue: $X.XX
+      Avg Monthly Revenue: $X.XX
+      Overall Growth: +/- X%
+
+2. Customer Acquisition and Retention Metrics
+  Chart Type: Donut Chart + KPI Cards Combination
+    2a. Customer Segmentation Donut Chart:
+      Inner ring: New vs Returning customers (count and %)
+      Visual split showing customer composition
+    2b. KPI Cards:
+      Total Customers
+      New Customers (count + %)
+      Returning Customers (count + %)
+      Retention Rate
+  Attributes Needed:
+    Customer_ID (unique count)
+    Date (to identify first transaction)
+    Transaction_ID (count per customer)
+  Calculated Metrics:
+    New Customers: Customers with only 1 transaction OR first transaction in the period
+    Returning Customers: Customers with 2+ transactions
+    Retention Rate: (Returning Customers / Total Customers) × 100
+  What to Focus On:
+    Customer composition: What % are loyal/repeat customers?
+    Acquisition success: Are we bringing in new customers?
+    Retention health: Strong retention (>30-40%) indicates customer satisfaction
+    Balance: Healthy mix of new and returning customers
+  Recommendations:
+    Use contrasting colors:
+      New customers: Light blue or green
+      Returning customers: Dark blue or green
+    Display both count and percentage on the donut chart
+    Add a retention benchmark if industry standards are available
+    Alternative view: Simple stat cards showing:
+        ┌──────────────┬──────────────┬──────────────┐
+        │ Total        │ New          │ Returning    │
+        │ Customers    │ Customers    │ Customers    │
+        ┼──────────────┼──────────────┼──────────────┼
+        │ X,XXX        │ X,XXX (XX%)  │ X,XXX (XX%)  │
+        └──────────────┴──────────────┴──────────────┘
+
+3. Top-Performing Product Categories and Brands
+  Chart Type: Combined Horizontal Bar Chart with Sparklines
+    a. Top 5 Product Categories - Horizontal Bar Chart:
+      Bars showing total revenue
+      Small sparkline next to each bar showing 12-month trend
+    3b. Top 5 Product Brands - Horizontal Bar Chart: Same format as categories
+  Attributes Needed:
+    Product_Category, Product_Brand
+    Total_Amount (aggregated as SUM)
+    Date (for trend sparklines)
+    Transaction_ID (count for volume)
+  What to Focus On:
+    Revenue leaders: Which categories/brands drive most revenue?
+    Trend direction: Are top performers growing or declining?
+    Volume vs Value: High revenue with low transactions = premium products
+    Concentration risk: Is revenue too dependent on few categories/brands?
+  Recommendations:
+    Dual metric display on each bar:
+      Primary: Revenue amount
+      Secondary: Number of transactions (in parentheses or smaller text)
+    Color coding for trends:
+      Green sparkline: Growing trend
+      Red sparkline: Declining trend
+      Gray sparkline: Stable trend
+  Layout suggestion:
+    Top 5 Product Categories by Revenue
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    1. Category A  ████████████ $XXX,XXX (X,XXX orders) ↗️
+    2. Category B  ██████████   $XXX,XXX (X,XXX orders) ↗️
+    3. Category C  ████████     $XXX,XXX (X,XXX orders) →
+    4. Category D  ██████       $XXX,XXX (X,XXX orders) ↘️
+    5. Category E  ████         $XXX,XXX (X,XXX orders) ↗️
+    *Alternative: Side-by-side comparison table
+      Column 1: Rank & Name
+      Column 2: Revenue
+      Column 3: Volume
+      Column 4: Trend (mini line chart or arrow icon)
+
+4. Key Operational Highlights
+  Chart Type: Stacked Bar Chart + Status Summary Cards
+    4a. Shipping Method Usage - Horizontal Stacked Bar Chart: Shows distribution of shipping methods by volume
+    4b. Order Status Summary - KPI Cards with Icons: Successful orders vs problematic orders breakdown
+  Attributes Needed:
+    Shipping_Method (count of usage)
+    Order_Status (categorized into success vs problems)
+    Transaction_ID (count)
+    Total_Amount (for revenue by status)
+  What to Focus On:
+    Operational efficiency: Are most orders successful?
+    Shipping preferences: What methods do customers prefer?
+    Problem areas: What % of orders have issues?
+    Financial impact: Revenue at risk from problematic orders
+  Suggested Operational KPIs:
+    Order Fulfillment Rate: (Successful orders / Total orders) × 100
+    Problem Order Rate: (Cancelled + Returned / Total orders) × 100
+    Most Used Shipping Method: Top method by volume
+    Shipping Method Diversity: Number of methods actively used
+  Recommendations:
+    Order Status Summary Cards:
+      ┌─────────────────┬─────────────────┬─────────────────┐
+      │ ✓ Successful    │ ⚠ Problematic  │ 📊 Fulfillment  │
+      │ Orders          │ Orders          │ Rate            │
+      ┼─────────────────┼─────────────────┼─────────────────┼
+      │ X,XXX (XX%)     │ XXX (XX%)       │ XX.X%           │
+      ┼─────────────────┼─────────────────┼─────────────────┼
+      │ $XXX,XXX        │ $XX,XXX         │                 │
+      └─────────────────┴─────────────────┴─────────────────┘
+    Categorization for Order_Status:
+      Successful: "Delivered", "Completed", "Shipped" (if applicable)
+      Problematic: "Cancelled", "Returned", "Pending" (if overdue), "Failed"
+    Shipping Methods Chart:
+      Horizontal stacked 100% bar showing distribution
+      Labels with % for each method
+      Order by most used (left) to least used (right)
+    Additional Metrics to Consider:
+      Key Operational Metrics:
+        Order Fulfillment Rate: XX.X%
+        Most Popular Shipping: [Method Name] (XX% of orders)
+        Average Order Processing: [if derivable from data]
+        Problem Resolution Rate: [if status changes tracked]
+
+5. Summary of Customer Satisfaction and Feedback
+  Chart Type: Multi-Component Dashboard Element
+    5a. Average Ratings by Product Category - Horizontal Bar Chart with Stars:
+      Bars showing average rating (1-5 scale)
+      Star icons for visual appeal
+    5b. Feedback Sentiment Trend - Line Chart:
+      Monthly sentiment trend (if sentiment can be derived)
+      Or average ratings over time
+    5c. Key Feedback Highlights - Text Summary Box: Top positive and negative themes
+  Attributes Needed:
+    Ratings (average per category)
+    Product_Category
+    Feedback (text analysis for themes)
+    Date (for trend analysis)
+  What to Focus On:
+    Overall satisfaction level: Are customers happy?
+    Category-specific issues: Which products get best/worst ratings?
+    Trend direction: Is satisfaction improving or declining?
+    Actionable insights: What are customers saying?
+  Recommendations:
+    5a. Ratings by Category:
+      Average Customer Ratings by Product Category
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      Category A  ████████░░ 4.2 ★★★★☆ (XXX reviews)
+      Category B  ███████░░░ 3.8 ★★★★☆ (XXX reviews)
+      Category C  █████████░ 4.5 ★★★★★ (XXX reviews)
+      Category D  ██████░░░░ 3.2 ★★★☆☆ (XXX reviews)
+      Category E  ████████░░ 4.1 ★★★★☆ (XXX reviews)
+    5b. Sentiment Trend Over Time:
+      Line chart showing monthly average rating
+      Shaded regions:
+        Green zone: 4.0-5.0 (Excellent)
+        Yellow zone: 3.0-3.9 (Good)
+        Red zone: Below 3.0 (Needs Improvement)
+    5c. Feedback Highlights Box:
+      📊 Customer Feedback Summary
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        Overall Rating: 4.1 / 5.0 ★★★★☆
+        👍 Top Positive Themes:
+        [Theme 1 - e.g., "Product Quality"]
+        [Theme 2 - e.g., "Fast Shipping"]
+        [Theme 3 - e.g., "Value for Money"]
+        👎 Areas for Improvement:
+        [Theme 1 - e.g., "Customer Service"]
+        [Theme 2 - e.g., "Packaging"]
+        [Theme 3 - e.g., "Product Variety"]
+        Total Feedback Entries: X,XXX
+      For Feedback Analysis:
+        Use simple keyword frequency analysis from Feedback field
+        Common positive words: "great", "excellent", "love", "fast", "quality"
+        Common negative words: "poor", "slow", "issue", "problem", "disappointed"
+        Or manually categorize if dataset is small enough
+  Alternative - Ratings Distribution:
+    Horizontal stacked bar showing % of 5-star, 4-star, 3-star, 2-star, 1-star ratings
+    Quick view of rating spread
+      Design Principles for Executive Summary:
+        Scannable: Leadership should grasp key insights in 30 seconds
+        Visual Hierarchy: Most important metrics (revenue, customers) at top
+        Color Consistency:
+          Green: Positive/growth
+          Red: Negative/declining
+          Blue: Neutral/informational
+          Yellow: Warning/attention needed
+      Minimal Text: Let numbers and visuals tell the story
+      Actionable: Each section should trigger a question: "Why?" or "What next?"
+
+####Looker Studio Implementation Tips:
+      Use Scorecards for key metrics (Total Revenue, Customer counts, Ratings)
+      Embed calculated fields:
+        New vs Returning customer logic
+        Order status categorization (CASE statements)
+        Growth rate calculations
+      Date range control at top: Allow filtering to specific periods if needed
+      Interactive filters: Click on a category to see details (optional, but powerful)
+      Mobile-responsive: Ensure dashboard works on tablets for exec presentations

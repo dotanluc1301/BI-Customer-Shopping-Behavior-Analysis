@@ -1,6 +1,7 @@
 Introduction: This project aims to explore the customer shopping insights\
 \
-Dataset source: https://www.kaggle.com/datasets/sahilprajapati143/retail-analysis-large-dataset/data\
+Dataset source: https://www.kaggle.com/datasets/sahilprajapati143/retail-analysis-large-dataset/data
+\
 Dashboard: https://dbc-c9a0306c-ed0a.cloud.databricks.com/dashboardsv3/01f0aa00ef5c14c98d9c4b5b2f384712/published?o=3519148317763794
 \
 Table of Content:\
