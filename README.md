@@ -9,3 +9,4 @@ Table of Content:\
 2/ Problem statement: Uncover and present the painpoints which the business are dealing with.\
 3/ Data Handling: Showing step-by-step how to make the original data set usable and ready for data visualisation\
 4/ Insights and Call-to-Action (CTA): Summarise the overarching and detail the uncovered insights, by then suggest the actions should be taken or any further investigation.
+![Page 1 of the document](/Asset/dashboard-preview.png)
